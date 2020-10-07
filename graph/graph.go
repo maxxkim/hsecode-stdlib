@@ -10,6 +10,12 @@ type Graph struct {
 	edges map[int]map[int]interface{}
 }
 
+
+const (
+	Directed   Type = 0
+	Undirected Type = 1
+)
+
 func New(graphType Type) *Graph {
 	G := &Graph{
 		Type:  graphType,
@@ -37,13 +43,13 @@ func (g *Graph) AddEdge(u, v int, edgeData interface{}) {
 }
 
 func (g *Graph) Edge(u, v int) (interface{}, bool) {
-	if g.Type == 0 {
+	if g.Type == Directed {
 		if val1, ok := g.edges[u]; ok {
 			if val2, ok := val1[v]; ok {
 				return val2, true
 			}
 		}
-	} else if g.Type == 1 {
+	} else if g.Type == Undirected {
 		if val1, ok := g.edges[u]; ok {
 			if val2, ok := val1[v]; ok {
 				return val2, true
