@@ -123,7 +123,6 @@ func New() *Set {
 	return NewCustomMap(comparator)
 }
 
-
 func (s *Set) Begin() *Iterator {
 	if s.length == 0 {
 		return nil
