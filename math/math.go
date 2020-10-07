@@ -14,7 +14,7 @@ func NthPrime(n int) int {
 }
 
 func IsPrime(n int) bool {
-	if n==0{
+	if n == 0 {
 		panic("n==0")
 	}
 	if n < 2 {
