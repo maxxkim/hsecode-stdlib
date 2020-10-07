@@ -10,7 +10,6 @@ type Graph struct {
 	edges map[int]map[int]interface{}
 }
 
-
 const (
 	Directed   Type = 0
 	Undirected Type = 1
