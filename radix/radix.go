@@ -32,7 +32,7 @@ func SortBYOB(x, buffer []uint64) {
 	var key uint8
 
 	for keyOffset := uint(0); keyOffset < bitSize; keyOffset += radix {
-		var offset [256]int
+		var offset [512]int
 		sorted := true
 		var prev uint64 = 0
 
