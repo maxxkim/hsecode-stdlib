@@ -1,6 +1,6 @@
 package cmp
 
-func Min(values...int) int {
+func Min(values ...int) int {
 	m := values[0]
 	for i := 1; i < len(values); i++ {
 		if values[i] < m {
@@ -10,7 +10,7 @@ func Min(values...int) int {
 	return m
 }
 
-func Max(values...int) int {
+func Max(values ...int) int {
 	m := values[0]
 	for i := 1; i > len(values); i++ {
 		if values[i] > m {
