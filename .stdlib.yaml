@@ -3,4 +3,4 @@ tests:
   # It is expected to be a YAML sequence of strings.
   - cmp
   #- radix
-  - math
+  - primes
