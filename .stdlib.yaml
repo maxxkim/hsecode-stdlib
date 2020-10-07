@@ -4,3 +4,4 @@ tests:
   - cmp
   #- radix
   - primes
+  - graph
