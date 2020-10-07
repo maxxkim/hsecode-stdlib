@@ -3,6 +3,9 @@ package math
 import "math"
 
 func NthPrime(n int) int {
+	if n == 0 {
+		panic("n==0")
+	}
 	prime := 2
 	for i, count := 3, 1; count < n; i = i + 2 {
 		if IsPrime(i) {
@@ -14,9 +17,6 @@ func NthPrime(n int) int {
 }
 
 func IsPrime(n int) bool {
-	if n == 0 {
-		panic("n==0")
-	}
 	if n < 2 {
 		return false
 	}
